@@ -1,0 +1,15 @@
+{
+  "name": "devpulse-capstone-root",
+  "version": "1.0.0",
+  "description": "DevPulse - Agile Sprint & Team Project Management (MERN Stack Capstone)",
+  "scripts": {
+    "dev:client": "npm run dev --prefix client",
+    "dev:server": "npm run dev --prefix server",
+    "build:client": "npm run build --prefix client",
+    "seed": "npm run seed --prefix server",
+    "test": "npm run test --prefix server"
+  },
+  "keywords": ["mern", "mongodb", "express", "react", "node", "capstone", "ictak"],
+  "author": "ICTAK MERN Student",
+  "license": "MIT"
+}
