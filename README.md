@@ -325,8 +325,8 @@ Test Results: 11 Passed, 0 Failed
 ### Step 1: Clone & Configure
 ```bash
 # Clone the repository
-git clone <repository-url>
-cd capstone
+git clone https://github.com/abhinav225403-pixel/capstone-project.git
+cd capstone-project
 
 # Client configuration
 cp client/.env.example client/.env
@@ -391,7 +391,7 @@ Navigate to `http://localhost:5173` and click any **1-Click Evaluator Persona** 
 
 ## 12. Final Submission Checklist (ICTAK Section 13)
 
-- [x] **GitHub repository URL is shared and accessible to reviewers.**
+- [x] **GitHub repository URL**: [https://github.com/abhinav225403-pixel/capstone-project](https://github.com/abhinav225403-pixel/capstone-project) (accessible to reviewers).
 - [x] **README explains the project, features, tech stack, setup steps, environment variable names, and live links.**
 - [x] **Core flows tested and working end-to-end (registration, login, project creation, task management, kanban board, analytics).**
 - [x] **`.env` files are excluded from Git repository (`.gitignore`), and `.env.example` templates are provided.**
