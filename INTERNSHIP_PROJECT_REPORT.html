@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ICTAK Summer Internship Report — DevPulse</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+    @page {
+      size: A4 portrait;
+      margin: 14mm 16mm 14mm 16mm;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: #1e293b;
+      line-height: 1.45;
+      font-size: 9.5pt;
+      background: #ffffff;
+    }
+
+    .page-break {
+      page-break-after: always;
+      break-after: page;
+    }
+
+    /* Cover Page */
+    .cover-page {
+      height: 96vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      text-align: center;
+      padding: 30px 10px 10px;
+    }
+
+    .cover-header h1 {
+      font-family: 'Outfit', sans-serif;
+      color: #2563eb;
+      font-size: 26pt;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .cover-header h2 {
+      font-family: 'Outfit', sans-serif;
+      color: #1e40af;
+      font-size: 15pt;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .cover-title-box {
+      margin: 30px 0;
+      padding: 22px 26px;
+      border-top: 3px solid #2563eb;
+      border-bottom: 3px solid #2563eb;
+      background: #f8fafc;
+      width: 100%;
+    }
+
+    .cover-title-box h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 21pt;
+      color: #0f172a;
+      font-weight: 800;
+      line-height: 1.25;
+      margin-bottom: 6px;
+    }
+
+    .cover-title-box p {
+      color: #2563eb;
+      font-size: 11pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .cover-logo-box {
+      margin: 20px 0;
+      padding: 16px 20px;
+      border: 3px solid #0284c7;
+      display: inline-block;
+      border-radius: 8px;
+      background: #f0f9ff;
+    }
+
+    .cover-footer {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .cover-footer p {
+      font-size: 10.5pt;
+      color: #334155;
+      margin-bottom: 5px;
+    }
+
+    .cover-footer strong {
+      color: #0f172a;
+    }
+
+    /* Section Headings */
+    h2.section-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 13pt;
+      font-weight: 800;
+      color: #2563eb;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      margin-top: 14px;
+      margin-bottom: 8px;
+      border-bottom: 1.5px solid #e2e8f0;
+      padding-bottom: 3px;
+    }
+
+    h3.sub-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 10.5pt;
+      font-weight: 700;
+      color: #0f172a;
+      margin-top: 10px;
+      margin-bottom: 4px;
+    }
+
+    p {
+      margin-bottom: 7px;
+      text-align: justify;
+    }
+
+    ul, ol {
+      margin-left: 20px;
+      margin-bottom: 8px;
+    }
+
+    li {
+      margin-bottom: 3px;
+    }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 8px 0 12px;
+      font-size: 8.5pt;
+    }
+
+    th, td {
+      border: 1px solid #cbd5e1;
+      padding: 5px 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f1f5f9;
+      color: #0f172a;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 8pt;
+      letter-spacing: 0.03em;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f8fafc;
+    }
+
+    pre, code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 8pt;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-size: 7.5pt;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .badge-pass {
+      background: #dcfce7;
+      color: #15803d;
+      border: 1px solid #86efac;
+    }
+
+    .highlight-box {
+      background: #eff6ff;
+      border-left: 3.5px solid #2563eb;
+      padding: 8px 12px;
+      margin: 8px 0;
+      border-radius: 0 4px 4px 0;
+      font-size: 9pt;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PAGE 1: COVER PAGE -->
+  <div class="cover-page">
+    <div class="cover-header">
+      <h1>ICT ACADEMY OF KERALA</h1>
+      <h2>Summer Internship Report</h2>
+      <p style="font-size: 13pt; color: #475569; font-weight: 600;">Full Stack Application Development with ReactJS</p>
+    </div>
+
+    <div class="cover-title-box">
+      <h3>DevPulse — Enterprise Agile Project &amp; Sprint Collaboration Suite</h3>
+      <p>MERN STACK CAPSTONE PROJECT</p>
+    </div>
+
+    <div class="cover-logo-box">
+      <svg width="100" height="66" viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="5" y="5" width="110" height="70" rx="6" stroke="#0284c7" stroke-width="4" fill="#ffffff"/>
+        <path d="M25 25V55H38V43H50V31H38V25H25Z" fill="#0284c7"/>
+        <rect x="65" y="25" width="30" height="10" rx="2" fill="#0284c7"/>
+        <rect x="75" y="38" width="10" height="17" rx="2" fill="#0284c7"/>
+      </svg>
+      <div style="font-size: 8.5pt; font-weight: 800; color: #0284c7; letter-spacing: 0.1em; margin-top: 4px;">ICT ACADEMY KERALA</div>
+    </div>
+
+    <div class="cover-footer">
+      <p><strong>Name of Team Member:</strong> Abhinav (Full Stack Intern)</p>
+      <p><strong>Name of Your Institution:</strong> Information &amp; Communication Technology Academy of Kerala (ICTAK)</p>
+      <p><strong>Track:</strong> Full Stack Development (MongoDB, Express, React, Node.js)</p>
+      <p><strong>Date:</strong> October 2026</p>
+      <p style="font-size: 9pt; color: #2563eb; margin-top: 4px;">
+        Repository: https://github.com/abhinav225403-pixel/capstone-project
+      </p>
+    </div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- PAGE 2: EXECUTIVE SUMMARY, INTRODUCTION, OBJECTIVES -->
+  <div>
+    <h2 class="section-title">EXECUTIVE SUMMARY</h2>
+    <p>
+      Modern software development relies heavily on Agile methodologies where iterative sprints, continuous integration, and transparent velocity tracking are essential. However, many engineering teams struggle with fragmented project management tools that are either overly complex or lack real-time visibility into developer workload.
+    </p>
+    <p>
+      During this internship under the <strong>Information &amp; Communication Technology Academy of Kerala (ICTAK)</strong>, I planned, architected, developed, tested, and deployed <strong>DevPulse</strong>, an enterprise-grade Agile Project and Sprint Collaboration Suite built on the <strong>MERN (MongoDB, Express.js, React.js, Node.js)</strong> stack.
+    </p>
+    <p>
+      DevPulse delivers a centralized platform featuring an interactive 5-column Kanban board with optimistic drag-and-drop status transitions, milestone progress tracking, embedded acceptance criteria checklists, live discussion feeds, and Role-Based Access Control (RBAC) across Administrators, Engineering Managers, and Team Members. The system includes an automated 11-step regression test suite, salted password hashing (<code>bcryptjs</code>), cryptographic token authentication (<code>jsonwebtoken</code>), and an embedded in-memory MongoDB fallback engine for zero-config evaluation.
+    </p>
+
+    <h2 class="section-title">INTRODUCTION</h2>
+    <p>
+      Agile and Scrum frameworks have transformed contemporary software delivery by dividing complex roadmaps into structured, time-boxed sprints. Despite commercial adoption of platforms such as Jira and Linear, engineering teams frequently experience productivity friction due to tool bloat, steep learning curves, and opaque personal workload visibility.
+    </p>
+    <p>
+      DevPulse addresses this gap by providing an intuitive, lightweight, and responsive workspace tailored specifically for developer teams. Engineering Leads can easily configure project parameters, set milestones, and track budgets, while developers can move tasks across visual columns, log hours, test checklist criteria, and comment on tickets in real time.
+    </p>
+    <p>
+      This project was completed in full compliance with the guidelines established in the <em>ICTAK Student Reference Guide</em>, implementing three-tier architectural separation of concerns, mobile-first design, comprehensive error shielding, and version-controlled Git history.
+    </p>
+
+    <h2 class="section-title">OBJECTIVES</h2>
+    <p>The primary objectives of this internship project were to:</p>
+    <ol>
+      <li><strong>Architect a Secure RESTful API:</strong> Develop modular Express.js routes and controllers implementing clean resource-based endpoints and standardized HTTP status codes (200, 201, 400, 401, 403, 404, 409).</li>
+      <li><strong>Implement Robust Authentication &amp; RBAC:</strong> Incorporate JWT token verification and salted password hashing with <code>bcryptjs</code>, enforcing role-based authorization across Admin, Manager, and Member tiers with server-side record ownership verification.</li>
+      <li><strong>Engineer a Dynamic React Frontend:</strong> Construct a responsive Single Page Application using React 18, Vite, and custom Vanilla CSS with dark glassmorphism and HSL design tokens.</li>
+      <li><strong>Implement Four Mandatory UI States (ICTAK Section 7.3):</strong> Ensure every screen provides distinct Loading skeletons, Success layouts, illustrated Empty states with CTA triggers, and user-friendly Error states with retry buttons.</li>
+      <li><strong>Deliver an Interactive 5-Column Kanban Board:</strong> Build an interactive board supporting Backlog, To Do, In Progress, In Review, and Done workflows with optimistic UI updates.</li>
+      <li><strong>Automate Verification &amp; Testing:</strong> Develop an automated integration test runner to validate backend endpoints against regression errors.</li>
+      <li><strong>Ensure Industry-Standard Documentation:</strong> Maintain clean Git commit milestones, environment templates, and complete architectural documentation.</li>
+    </ol>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- PAGE 3: SCOPE, DELIVERABLES & METHODOLOGY -->
+  <div>
+    <h2 class="section-title">SCOPE AND DELIVERABLES</h2>
+    <p>
+      The project scope encompasses full-stack implementation, database schema modeling, client-side state management, and automated testing:
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 25%;">Module / Component</th>
+          <th>Deliverable Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Authentication Module</strong></td>
+          <td>User registration with input validation, secure login with JWT issuance, 1-Click evaluator persona login cards, and profile updates.</td>
+        </tr>
+        <tr>
+          <td><strong>Project Management</strong></td>
+          <td>Project CRUD endpoints, milestone deadline tracking, category and budget management, and auto-computed progress bars.</td>
+        </tr>
+        <tr>
+          <td><strong>Task Engine &amp; Sprints</strong></td>
+          <td>Auto-incremented ticket numbers (e.g. <code>NEX-1</code>, <code>PAY-1</code>), priority indicators, task types, due dates, and hour logging.</td>
+        </tr>
+        <tr>
+          <td><strong>Embedded Subdocuments</strong></td>
+          <td>Mongoose embedded acceptance criteria checklists and chronological comment threads.</td>
+        </tr>
+        <tr>
+          <td><strong>Kanban Board</strong></td>
+          <td>5-column visual layout supporting directional shift buttons and drag-and-drop with optimistic state synchronization.</td>
+        </tr>
+        <tr>
+          <td><strong>Query &amp; Filter Engine</strong></td>
+          <td>Full-text search, multi-criteria filtering (status, priority, assignee), column sorting, and paginated table navigation.</td>
+        </tr>
+        <tr>
+          <td><strong>Telemetry &amp; Analytics</strong></td>
+          <td>Dashboard metrics cards, workspace activity audit feed, sprint velocity calculations, and one-click JSON report export.</td>
+        </tr>
+        <tr>
+          <td><strong>Admin RBAC Module</strong></td>
+          <td>Administrative dashboard allowing role promotion/demotion and account deactivation/reactivation.</td>
+        </tr>
+        <tr>
+          <td><strong>Automated Test Suite</strong></td>
+          <td>Standalone regression test suite (<code>server/test/api.test.js</code>) testing 11 end-to-end API scenarios.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 class="section-title">METHODOLOGY</h2>
+    <p>
+      The project followed an <strong>Agile Iterative Methodology</strong> structured around the 9 project milestones prescribed in the ICTAK guidelines:
+    </p>
+
+    <div class="highlight-box">
+      <strong>Milestone Progression:</strong><br>
+      Milestone 1 (SRS &amp; Definition) &rarr; Milestone 2 (Repo &amp; Skeleton) &rarr; Milestone 3 (Database &amp; API CRUD) &rarr; Milestone 4 (Auth &amp; RBAC) &rarr; Milestone 5 (Frontend Screens &amp; 4 States) &rarr; Milestone 6 (API Integration) &rarr; Milestone 7 (Automated Testing) &rarr; Milestone 8 (Deployment Config) &rarr; Milestone 9 (Final Documentation).
+    </div>
+
+    <p>
+      DevPulse adheres to a <strong>Three-Tier MERN Architecture</strong>:
+    </p>
+    <ul>
+      <li><strong>Client Tier (React SPA):</strong> Modular component architecture leveraging React 18, React Router v7, and React Context API (<code>AuthContext</code>, <code>ToastContext</code>) communicating via a central <code>api.js</code> HTTP client.</li>
+      <li><strong>Server Tier (Express API):</strong> Node.js application structuring routes, controllers, JWT middleware, and centralized error handling with complete separation of concerns.</li>
+      <li><strong>Database Tier (MongoDB &amp; Mongoose):</strong> Structured schemas with compound indexes (<code>{ project: 1, status: 1 }</code>), pre-save hashing hooks, and an embedded in-memory MongoDB runner.</li>
+    </ul>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- PAGE 4: PROJECT ACTIVITIES -->
+  <div>
+    <h2 class="section-title">PROJECT ACTIVITIES</h2>
+    <p>During the internship, the following technical activities were executed:</p>
+
+    <h3 class="sub-title">1. Database &amp; Schema Design</h3>
+    <p>Developed four Mongoose schemas in <code>server/src/models/</code>:</p>
+    <ul>
+      <li><strong>User Schema:</strong> Name, unique email, role (<code>admin</code>, <code>manager</code>, <code>member</code>), job title, and password (configured with <code>select: false</code> and salted with <code>bcrypt.hash(password, 10)</code>).</li>
+      <li><strong>Project Schema:</strong> Project name, uppercase key (e.g. <code>NEX</code>), category, target date, budget, and references to owners and team members. Compound index on <code>{ owner: 1, status: 1 }</code>.</li>
+      <li><strong>Task Schema:</strong> Title, auto-incremented ticket identifier, project foreign key, priority, status, and estimates. Embeds checklist subdocuments (<code>[{ title, completed }]</code>) and comments (<code>[{ user, authorName, text, createdAt }]</code>). Compound index on <code>{ project: 1, status: 1 }</code>.</li>
+      <li><strong>ActivityLog Schema:</strong> Stores chronological workspace events with user avatars and timestamps for compliance and live telemetry.</li>
+    </ul>
+
+    <h3 class="sub-title">2. REST API Engineering &amp; Middleware</h3>
+    <p>Implemented resource-based controllers and middleware under <code>server/src/</code>:</p>
+    <ul>
+      <li><code>authMiddleware.protect</code>: Validates Bearer JWT tokens, extracts decoded user ID, and checks account active status.</li>
+      <li><code>authMiddleware.authorize</code>: Restricts administrative endpoints to specific user roles, returning <code>403 Forbidden</code> on violations.</li>
+      <li><code>errorHandler.js</code>: Central middleware catching CastErrors (404), duplicate key collisions (409), and validation errors (400) without exposing server stack traces.</li>
+      <li>Dual-mode database connector (<code>config/db.js</code>): Connects to MongoDB Atlas when <code>MONGODB_URI</code> is supplied, or boots an in-memory embedded engine seeded with realistic demo data.</li>
+    </ul>
+
+    <h3 class="sub-title">3. Frontend UI Development &amp; Screen States</h3>
+    <p>
+      Crafted an accessible, dark glassmorphism design system in <code>client/src/index.css</code> with custom HSL tokens. Every functional screen implements the four mandatory states:
+    </p>
+    <ul>
+      <li><strong>Loading:</strong> Shimmer skeleton loaders (<code>LoadingSkeleton.jsx</code>) matching card, table, and kanban layouts.</li>
+      <li><strong>Success:</strong> Clean data presentation with glowing indicators and color-coded status badges.</li>
+      <li><strong>Empty:</strong> Illustrated empty states (<code>EmptyState.jsx</code>) with clear call-to-action buttons.</li>
+      <li><strong>Error:</strong> Clear, non-technical explanations (<code>ErrorState.jsx</code>) with a "Retry Request" trigger.</li>
+    </ul>
+
+    <h3 class="sub-title">4. Challenges &amp; Solutions</h3>
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 30%;">Challenge</th>
+          <th>Solution Implemented</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Execution Policy Block</strong></td>
+          <td>Windows PowerShell disabled npm scripts. Executed commands through <code>cmd.exe /c "npm ..."</code>.</td>
+        </tr>
+        <tr>
+          <td><strong>Missing Local MongoDB</strong></td>
+          <td>Engineered an automatic fallback in <code>db.js</code> using <code>mongodb-memory-server</code> with auto-seeding.</td>
+        </tr>
+        <tr>
+          <td><strong>Icon Deprecation in Build</strong></td>
+          <td>Replaced deprecated icon imports with <code>Columns3</code> in <code>lucide-react</code>, achieving 465ms clean build.</td>
+        </tr>
+        <tr>
+          <td><strong>Optimistic Kanban Sync</strong></td>
+          <td>Applied immediate local state update on card drag/move with rollback and toast notification if the API call fails.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- PAGE 5: RESULTS, CONCLUSION & APPENDIX -->
+  <div>
+    <h2 class="section-title">RESULTS &amp; FINDINGS</h2>
+    <h3 class="sub-title">Automated API Test Suite Results</h3>
+    <p>
+      An automated integration test runner (<code>server/test/api.test.js</code>) was executed to validate core flows against an active server instance. All 11 test cases passed successfully:
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Test Case Description</th>
+          <th>Method &amp; Path</th>
+          <th>Expected Code</th>
+          <th>Result</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Health Check Endpoint</td>
+          <td><code>GET /api/health</code></td>
+          <td>200 OK</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+        <tr>
+          <td>User Registration &amp; Token Issuance</td>
+          <td><code>POST /api/auth/register</code></td>
+          <td>201 Created</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+        <tr>
+          <td>Duplicate Email Registration Guard</td>
+          <td><code>POST /api/auth/register</code></td>
+          <td>409 Conflict</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+        <tr>
+          <td>Valid User Authentication</td>
+          <td><code>POST /api/auth/login</code></td>
+          <td>200 OK</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+        <tr>
+          <td>Invalid Password Rejection</td>
+          <td><code>POST /api/auth/login</code></td>
+          <td>401 Unauthorized</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+        <tr>
+          <td>Protected Route Token Enforcement</td>
+          <td><code>GET /api/projects</code></td>
+          <td>401 Unauthorized</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+        <tr>
+          <td>Authorized Project Creation</td>
+          <td><code>POST /api/projects</code></td>
+          <td>201 Created</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+        <tr>
+          <td>Task Creation with Auto-Numbering</td>
+          <td><code>POST /api/tasks</code></td>
+          <td>201 Created</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+        <tr>
+          <td>Kanban Status Transition (PATCH)</td>
+          <td><code>PATCH /api/tasks/:id/status</code></td>
+          <td>200 OK</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+        <tr>
+          <td>Dashboard Telemetry Aggregations</td>
+          <td><code>GET /api/stats/dashboard</code></td>
+          <td>200 OK</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+        <tr>
+          <td>Undefined Route Fallback Handler</td>
+          <td><code>GET /api/unknown_route</code></td>
+          <td>404 Not Found</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 class="sub-title">Production Build Verification</h3>
+    <p>
+      The Vite client compiled into production bundles in 465ms:
+      <code>dist/index.html</code> (1.36 kB), <code>dist/assets/index.css</code> (10.73 kB), and <code>dist/assets/index.js</code> (372.12 kB) with zero warnings.
+    </p>
+
+    <h2 class="section-title">CONCLUSION</h2>
+    <p>
+      The <strong>DevPulse</strong> capstone project was successfully engineered, tested, and published as a complete MERN stack application adhering to the standards of the <strong>ICT Academy of Kerala</strong>.
+    </p>
+    <p>
+      Through this internship, I gained hands-on expertise in three-tier architecture design, RESTful API development, JWT security protocols, Mongoose schema indexing, responsive Vanilla CSS design systems, and automated testing methodologies. The application is production-ready, version-controlled on GitHub, and capable of operating both with a managed MongoDB Atlas cluster and in a self-contained in-memory evaluation mode.
+    </p>
+
+    <h2 class="section-title">APPENDIX</h2>
+    <ul>
+      <li><strong>GitHub Repository:</strong> <a href="https://github.com/abhinav225403-pixel/capstone-project">https://github.com/abhinav225403-pixel/capstone-project</a></li>
+      <li><strong>Local Frontend URL:</strong> <code>http://localhost:5173</code></li>
+      <li><strong>Local API Health Check:</strong> <code>http://localhost:5000/api/health</code></li>
+      <li><strong>Pre-Seeded 1-Click Personas:</strong>
+        <ul>
+          <li>Admin: <code>admin@devpulse.io</code> (Password: <code>Password123!</code>)</li>
+          <li>Manager: <code>sarah.lead@devpulse.io</code> (Password: <code>Password123!</code>)</li>
+          <li>Developer: <code>alex.dev@devpulse.io</code> (Password: <code>Password123!</code>)</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+</body>
+</html>
